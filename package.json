@@ -13,10 +13,7 @@
     "radium": "^0.26.1",
     "react": "^17.0.2",
     "react-animated-css": "^1.2.1",
-<<<<<<< HEAD
-=======
     "react-circular-progressbar": "^2.0.4",
->>>>>>> 589cfd6acca54c047f1711c5cbe716b90bc8387d
     "react-dom": "^17.0.2",
     "react-native-svg": "^12.1.1",
     "react-scripts": "4.0.3",
