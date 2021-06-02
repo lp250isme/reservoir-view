@@ -75,6 +75,11 @@
   color: black;
 }
 
+.progressBar {
+  padding: 8px;
+  text-align: -webkit-center;
+}
+
 .App {
   text-align: center;
 }

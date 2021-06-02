@@ -3,13 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@fortawesome/react-native-fontawesome": "^0.2.6",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "radium": "^0.26.1",
     "react": "^17.0.2",
     "react-animated-css": "^1.2.1",
+<<<<<<< HEAD
+=======
+    "react-circular-progressbar": "^2.0.4",
+>>>>>>> 589cfd6acca54c047f1711c5cbe716b90bc8387d
     "react-dom": "^17.0.2",
+    "react-native-svg": "^12.1.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },
