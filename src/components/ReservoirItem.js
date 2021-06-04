@@ -32,21 +32,11 @@ const ReservoirItem = ({ idx, StationName, StationNo, reservoirItem }) => {
 
   return (
     <div key={StationNo} className="itemsOutter">
-      <div className="items">
+      <div className="items" onClick={() => (showResults[0] ? hide(StationNo) : show(StationNo))}>
         <p>
           {idx + 1}. {StationName}
         </p>
-        {showResults[0] ? (
-          // <button onClick={() => hide(StationNo)}>隱藏</button>
-          <div onClick={() => hide(StationNo)}>
-            <FontAwesomeIcon icon="minus" />
-          </div>
-        ) : (
-          // <button onClick={() => show(StationNo)}>詳細</button>
-          <div onClick={() => show(StationNo)}>
-            <FontAwesomeIcon icon="plus" />
-          </div>
-        )}
+        <div>{showResults[0] ? <FontAwesomeIcon icon="minus" /> : <FontAwesomeIcon icon="plus" />}</div>
       </div>
       {showResults[1] ? (
         <Animated animationIn="zoomIn" animationOut="zoomOut" isVisible={true}>
