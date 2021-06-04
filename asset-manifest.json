@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/reservoir-view/static/css/main.ef56495b.chunk.css",
+    "main.js": "/reservoir-view/static/js/main.9589773e.chunk.js",
+    "main.js.map": "/reservoir-view/static/js/main.9589773e.chunk.js.map",
+    "runtime-main.js": "/reservoir-view/static/js/runtime-main.a66cbac9.js",
+    "runtime-main.js.map": "/reservoir-view/static/js/runtime-main.a66cbac9.js.map",
+    "static/css/2.6c0f60ba.chunk.css": "/reservoir-view/static/css/2.6c0f60ba.chunk.css",
+    "static/js/2.13f9639b.chunk.js": "/reservoir-view/static/js/2.13f9639b.chunk.js",
+    "static/js/2.13f9639b.chunk.js.map": "/reservoir-view/static/js/2.13f9639b.chunk.js.map",
+    "index.html": "/reservoir-view/index.html",
+    "static/css/2.6c0f60ba.chunk.css.map": "/reservoir-view/static/css/2.6c0f60ba.chunk.css.map",
+    "static/css/main.ef56495b.chunk.css.map": "/reservoir-view/static/css/main.ef56495b.chunk.css.map",
+    "static/js/2.13f9639b.chunk.js.LICENSE.txt": "/reservoir-view/static/js/2.13f9639b.chunk.js.LICENSE.txt",
+    "static/media/Water-droplets.ae4b2819.png": "/reservoir-view/static/media/Water-droplets.ae4b2819.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a66cbac9.js",
+    "static/css/2.6c0f60ba.chunk.css",
+    "static/js/2.13f9639b.chunk.js",
+    "static/css/main.ef56495b.chunk.css",
+    "static/js/main.9589773e.chunk.js"
+  ]
+}
