@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# reservoir-view
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Taiwan reservoir real-time water level dashboard with a cyberpunk-style UI.
 
-## Available Scripts
+Data sourced from [Water Resources Agency (WRA)](https://fhy.wra.gov.tw/) open API.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Real-time water level monitoring for 21 major reservoirs across Taiwan
+- Animated water gauge with multi-layer waves, rising bubbles, sparkle particles, and gyroscope/mouse-reactive reflections
+- Grid view with glassmorphism cards and status-colored glow borders
+- Interactive map view (Leaflet) with color-coded reservoir markers
+- Historical trend charts (Recharts)
+- Search by reservoir name or basin
+- Sort by name, water level percentage, or basin
+- Dark mode with animated particle background and neon accents
+- Responsive design (mobile / tablet / desktop)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Vite** - Build tool
+- **React 19** - UI framework
+- **Tailwind CSS v4** - Styling
+- **Radix UI** - Accessible primitives (Dialog, Select, Tabs)
+- **TanStack Query** - Data fetching with caching and auto-refresh
+- **Leaflet + react-leaflet** - Map view
+- **Recharts** - Trend charts
+- **Lucide React** - Icons
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install
+npm run dev
+```
 
-### `npm run build`
+Open http://localhost:5173/reservoir-view/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Scripts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build to `dist/` |
+| `npm run preview` | Preview production build |
+| `npm run deploy` | Build and deploy to GitHub Pages |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+```
+src/
+  main.jsx              # Entry point + QueryClient setup
+  App.jsx               # Root component, state management
+  index.css             # Tailwind + theme + animations
+  lib/
+    api.js              # WRA API client
+    utils.js            # cn(), getWaterStatus(), formatters
+  hooks/
+    use-reservoirs.js   # Reservoir list query
+    use-reservoir-detail.js  # Single reservoir real-time query
+    use-gyroscope.js    # Device orientation / mouse tracking
+  components/
+    header.jsx          # Gradient title, view toggle, dark mode
+    search-filter.jsx   # Search input + sort select
+    reservoir-grid.jsx  # Responsive card grid
+    reservoir-card.jsx  # Glass card with water gauge
+    reservoir-detail-dialog.jsx  # Detail dialog
+    water-gauge.jsx     # Animated SVG water gauge
+    status-badge.jsx    # Color-coded status label
+    map-view.jsx        # Leaflet Taiwan map
+    trend-chart.jsx     # Recharts area chart
+    loading-skeleton.jsx
+    error-state.jsx
+    animated-background.jsx  # Canvas particle system
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## API
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Data from WRA Open API (`https://fhy.wra.gov.tw/WraApi`):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `GET /v1/Reservoir/Station?$filter=Importance eq 1` - List of major reservoirs
+- `GET /v1/Reservoir/RealTimeInfo?$filter=StationNo eq '{id}'` - Real-time data for a station
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
